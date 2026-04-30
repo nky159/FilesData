@@ -1,0 +1,37 @@
+[
+  {
+    "order_id": 1001,
+    "customer_id": 501,
+    "order_date": "2024-06-01",
+    "amount": 55000,
+    "status": "Delivered"
+  },
+  {
+    "order_id": 1002,
+    "customer_id": 502,
+    "order_date": "2024-06-02",
+    "amount": 4000,
+    "status": "Delivered"
+  },
+  {
+    "order_id": 1003,
+    "customer_id": 503,
+    "order_date": "2024-06-03",
+    "amount": 7000,
+    "status": "Shipped"
+  },
+  {
+    "order_id": 1004,
+    "customer_id": 504,
+    "order_date": "2024-06-04",
+    "amount": 30000,
+    "status": "Processing"
+  },
+  {
+    "order_id": 1005,
+    "customer_id": 505,
+    "order_date": "2024-06-05",
+    "amount": 4500,
+    "status": "Cancelled"
+  }
+]
