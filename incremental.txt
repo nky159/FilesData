@@ -1,0 +1,41 @@
+CREATE PROCEDURE sp_upsert_orders
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    MERGE dbo.orders AS target
+    USING dbo.orders_staging AS source
+    ON target.order_id = source.order_id
+
+    -- 🔁 UPDATE only if newer data arrives
+    WHEN MATCHED 
+        AND source.updated_date > target.updated_date
+    THEN 
+        UPDATE SET
+            target.customer_id = source.customer_id,
+            target.order_date  = source.order_date,
+            target.amount      = source.amount,
+            target.status      = source.status,
+            target.updated_date = source.updated_date
+
+    -- ➕ INSERT new records
+    WHEN NOT MATCHED BY TARGET 
+    THEN 
+        INSERT (
+            order_id, 
+            customer_id, 
+            order_date, 
+            amount, 
+            status,
+            updated_date
+        )
+        VALUES (
+            source.order_id, 
+            source.customer_id, 
+            source.order_date, 
+            source.amount, 
+            source.status,
+            source.updated_date
+        );
+
+END;
