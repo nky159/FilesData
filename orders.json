@@ -1,0 +1,42 @@
+[
+  {
+    "order_id": 1,
+    "customer_id": 101,
+    "order_date": "2024-01-10T10:30:00",
+    "amount": 2500.50,
+    "status": "Completed",
+    "updated_date": "2024-01-10T10:30:00"
+  },
+  {
+    "order_id": 2,
+    "customer_id": 102,
+    "order_date": "2024-02-15T14:20:00",
+    "amount": 1800.00,
+    "status": "Pending",
+    "updated_date": "2024-02-15T14:20:00"
+  },
+  {
+    "order_id": 3,
+    "customer_id": 103,
+    "order_date": "2024-03-05T09:10:00",
+    "amount": 3200.75,
+    "status": "Shipped",
+    "updated_date": "2024-03-05T09:10:00"
+  },
+  {
+    "order_id": 4,
+    "customer_id": 104,
+    "order_date": "2024-03-20T16:45:00",
+    "amount": 950.25,
+    "status": "Cancelled",
+    "updated_date": "2024-03-20T16:45:00"
+  },
+  {
+    "order_id": 5,
+    "customer_id": 105,
+    "order_date": "2024-04-01T11:00:00",
+    "amount": 4100.00,
+    "status": "Completed",
+    "updated_date": "2024-04-01T11:00:00"
+  }
+]
